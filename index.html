@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Gravity Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>3D Gravity Simulator</h1>
+    <p>Enter mass and position to calculate gravitational force and simulate motion in 3D.</p>
+
+    <form id="gravity-form">
+        <label for="mass1">Mass of Object 1 (kg):</label>
+        <input type="number" id="mass1" required>
+        <label for="pos1x">Position (x, y, z) of Object 1 (m):</label>
+        <input type="number" id="pos1x" required>
+        <input type="number" id="pos1y" required>
+        <input type="number" id="pos1z" required>
+
+        <label for="mass2">Mass of Object 2 (kg):</label>
+        <input type="number" id="mass2" required>
+        <label for="pos2x">Position (x, y, z) of Object 2 (m):</label>
+        <input type="number" id="pos2x" required>
+        <input type="number" id="pos2y" required>
+        <input type="number" id="pos2z" required>
+
+        <button type="button" onclick="calculateGravity()">Calculate Gravity</button>
+        <button type="button" onclick="startSimulation()">Start Simulation</button>
+    </form>
+
+    <p id="result"></p>
+    <canvas id="simulationCanvas" width="500" height="500"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
